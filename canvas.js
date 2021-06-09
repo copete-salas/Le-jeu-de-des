@@ -17,7 +17,7 @@ const roundRect = (x, y, w, h, radius) => {
   context.quadraticCurveTo(x, b, x, b - radius);
   context.lineTo(x, y + radius);
   context.quadraticCurveTo(x, y, x + radius, y);
-  context.fillStyle = "red";
+  context.fillStyle = "blue";
   context.fill();
 };
 roundRect(0, 0, 200, 200, 25);
@@ -68,20 +68,20 @@ const faceSix = () => {
 const gum = () => {
   ctx.beginPath();
   ctx.moveTo(100, 100);
-  ctx.arc(100, 100, 21, 0, Math.PI * 2);
+  ctx.arc(100, 100, 22, 0, Math.PI * 2);
   ctx.moveTo(30, 30);
-  ctx.arc(30, 30, 21, 0, Math.PI * 2);
+  ctx.arc(30, 30, 22, 0, Math.PI * 2);
   ctx.moveTo(170, 30);
-  ctx.arc(170, 30, 21, 0, Math.PI * 2);
+  ctx.arc(170, 30, 22, 0, Math.PI * 2);
   ctx.moveTo(30, 170);
-  ctx.arc(30, 170, 21, 0, Math.PI * 2);
+  ctx.arc(30, 170, 22, 0, Math.PI * 2);
   ctx.moveTo(170, 170);
-  ctx.arc(170, 170, 21, 0, Math.PI * 2);
+  ctx.arc(170, 170, 22, 0, Math.PI * 2);
   ctx.moveTo(30, 100);
-  ctx.arc(30, 100, 21, 0, Math.PI * 2);
+  ctx.arc(30, 100, 22, 0, Math.PI * 2);
   ctx.moveTo(170, 100);
-  ctx.arc(170, 100, 21, 0, Math.PI * 2);
-  ctx.fillStyle = "red";
+  ctx.arc(170, 100, 22, 0, Math.PI * 2);
+  ctx.fillStyle = "blue";
   ctx.fill();
 };
 // les faces des dés de 1 à 6

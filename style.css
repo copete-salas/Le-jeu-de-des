@@ -34,3 +34,7 @@ h2 {
 #number {
   display: none;
 }
+
+.ctn {
+  font-size: 2em;
+}

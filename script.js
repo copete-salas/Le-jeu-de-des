@@ -13,7 +13,9 @@ document.getElementById("global").textContent = "0";
 document.getElementById("global1").textContent = "0";
 document.getElementById("endOfTurn1").style.display = "none";
 document.getElementById("gamerOne").style.background = "red";
-document.getElementById("gamerTwo").style.background = "white";
+document.getElementById("gamerOne").style.color = "white";
+document.getElementById("gamerTwo").style.background = "black";
+document.getElementById("gamerTwo").style.color = "white";
 
 // sert a calculer un nombre aléatoire de 1 à 6 inclu
 const random = (max, min) => {
@@ -104,13 +106,17 @@ const playerChange = () => {
   if (document.getElementById("gamerOne").style.background == "red") {
     document.getElementById("endOfTurn").style.display = "none";
     document.getElementById("endOfTurn1").style.display = "block";
-    document.getElementById("gamerOne").style.background = "white";
-    document.getElementById("gamerTwo").style.background = "blue";
+    document.getElementById("gamerOne").style.background = "black";
+    document.getElementById("gamerTwo").style.background = "red";
+    document.getElementById("gamertwo").style.color = "white";
+    document.getElementById("gamerOne").style.color = "black";
   } else {
     document.getElementById("endOfTurn1").style.display = "none";
     document.getElementById("endOfTurn").style.display = "block";
     document.getElementById("gamerOne").style.background = "red";
-    document.getElementById("gamerTwo").style.background = "white";
+    document.getElementById("gamerTwo").style.background = "black";
+    document.getElementById("gamerOne").style.color = "white";
+    document.getElementById("gamertwo").style.color = "black";
   }
 };
 btnEndOfTurn.addEventListener("click", playerChange);
