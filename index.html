@@ -19,8 +19,6 @@
   <body>
     <header>
       <h1>Le Jeu De Dés</h1>
-    </header>
-    <main>
       <h2>Les règles du jeu</h2>
       <p>
         Règles : <br />
@@ -37,6 +35,33 @@
         fin de son tour. Le premier joueur qui atteint les 100 points sur global
         gagne le jeu.
       </p>
+    </header>
+    <main>
+      <div class="new-game">
+        <button id="newGame">nouvelle partie</button>
+      </div>
+      <div class="canvas">
+        <canvas id="canvas" height="200" width="200"></canvas>
+      </div>
+      <div class="score">
+        <p id="score">point</p>
+      </div>
+      <div class="container">
+        <div>
+          <h2 id="gamerOne">joueur 1</h2>
+          <p id="number">0</p>
+          <p id="global">point</p>
+        </div>
+        <div class="btn-game">
+          <p><button id="btn">lancer le dés</button></p>
+          <p><button id="endOfTurn">finir son tour</button></p>
+          <p><button id="endOfTurn1">finir son tour</button></p>
+        </div>
+        <div>
+          <h2 id="gamerTwo">joueur 2</h2>
+          <p id="global1">point</p>
+        </div>
+      </div>
     </main>
     <script
       type="module"
