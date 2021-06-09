@@ -11,3 +11,26 @@ h1 {
 h2 {
   font-size: 1.5em;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+.btn-game {
+  flex-direction: column;
+}
+
+.canvas,
+.new-game,
+.score {
+  text-align: center;
+  margin-top: 2%;
+}
+
+#number {
+  display: none;
+}
