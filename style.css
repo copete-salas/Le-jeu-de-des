@@ -10,16 +10,12 @@ body {
 
 header, footer, .rules {
   text-align: center;
+  color: white;
+
 }
 
 header {
   margin: 30px 0 30px 0;
-  color: white;
-}
-
-footer {
-  margin: 95px 0 0 0;
-  color: white;
 }
 
 main, .game {
@@ -45,6 +41,7 @@ main, .game {
   background-image:url(images/img-vainqueur.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 #winner-one, #winner-two {
@@ -115,3 +112,6 @@ main, .game {
   box-shadow: 0 2px rgba(128, 128, 128, 0.801);
 }
 
+footer {
+  margin: 95px 0 0 0;
+}
