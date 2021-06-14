@@ -94,7 +94,7 @@ btnNewGame.addEventListener('click', reset)
 // réinitialise tout les compteur et le dés quand on click sur nouvelle partie
 
 
-// le décompte des points de chaque joueur Jusqu'au vainqueur
+// le décompte des points de chaque joueur Jusqu'au vainqueur + affiche le vainqueur
 const resultScoreGlobal = () => {
   global.textContent = parseFloat(score.textContent) + parseFloat(global.textContent)
   gum()
@@ -127,7 +127,7 @@ const displayTheWinner = () => {
   reset()
 }
 document.getElementById('winner').addEventListener('click', displayTheWinner)
-// le décompte des points de chaque joueur
+// le décompte des points de chaque joueur Jusqu'au vainqueur + affiche le vainqueur
 
 
 // changement de joueur au click ou automatiquement
