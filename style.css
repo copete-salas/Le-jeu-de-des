@@ -1,40 +1,101 @@
 body {
   font-family: "Lato", sans-serif;
+  background-color: rgba(0, 183, 255, 0.123);
+}
+
+header, footer, .rules {
   text-align: center;
-  align-items: center;
 }
 
-h1 {
-  font-size: 2rem;
+header {
+  margin: 30px 0 30px 0
 }
 
-h2 {
-  font-size: 1.5em;
+footer {
+  margin: 95px 0 0 0;
 }
 
-.container {
+main, .game {
   display: flex;
-  align-items: center;
-  text-align: center;
   justify-content: space-around;
-  margin-top: 10%;
+  align-items: center;
+  text-align: center
 }
 
-.btn-game {
+#winner {
+  align-items: center;
+}
+
+#square, #winner {
+  width: 60%;
+  height: 450px;
+  border: 10px solid black;
+  border-image: linear-gradient(360deg, rgb(130, 79, 58), rgb(169, 142, 100));
+  border-image-slice: 1;
+}
+
+#winner-one, #winner-two {
+  margin-top: 190px
+}
+
+.new-game {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.game {
+  margin-top: 55px;
+}
+
+.button {
+  display: flex;
   flex-direction: column;
 }
 
-.canvas,
-.new-game,
-.score {
-  text-align: center;
-  margin-top: 2%;
+.roll-dice {
+  margin-bottom: 10px
+}
+
+.current {
+  background: rgb(234, 77, 78);
+  height: 65px;
+  width: 65px;
+}
+
+.score-global, .color {
+  color: red;
+  font-size: 25px
+}
+
+.score-current {
+  color: white
 }
 
 #number {
-  display: none;
+  display: none
 }
 
-.ctn {
-  font-size: 2em;
+.players {
+  display: flex;
+  font-size: 20px
+}
+
+#btn, #btn1, #endOfTurn, #endOfTurn1, .new-game {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background-color: grey;
+  box-shadow: 0 9px rgba(128, 128, 128, 0.801);
+}
+
+#btn:hover, #btn1:hover, #endOfTurn:hover, #endOfTurn1:hover, .new-game:hover {
+  transform: translateY(3px);
+  box-shadow: 0 6px rgba(128, 128, 128, 0.801);
+}
+
+#btn:active, #btn1:active, #endOfTurn:active, #endOfTurn1:active, .new-game:active {
+  transform: translateY(7px);
+  box-shadow: 0 2px rgba(128, 128, 128, 0.801);
 }

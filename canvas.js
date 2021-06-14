@@ -17,26 +17,27 @@ const roundRect = (x, y, w, h, radius) => {
   context.quadraticCurveTo(x, b, x, b - radius);
   context.lineTo(x, y + radius);
   context.quadraticCurveTo(x, y, x + radius, y);
-  context.fillStyle = "blue";
+  context.fillStyle = "black";
   context.fill();
 };
-roundRect(0, 0, 200, 200, 25);
+roundRect(0, 0, 80, 80, 8);
 // Arrondit les angles du dés
+
 
 // les faces des dés de 1 à 6
 const faceOne = () => {
   ctx.beginPath();
-  ctx.arc(100, 100, 20, 0, Math.PI * 2);
-  ctx.fillStyle = "black";
+  ctx.arc(40, 40, 8, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
   ctx.fill();
 };
 faceOne();
 const faceTwo = () => {
   ctx.beginPath();
-  ctx.arc(170, 30, 20, 0, Math.PI * 2);
-  ctx.moveTo(30, 170);
-  ctx.arc(30, 170, 20, 0, Math.PI * 2);
-  ctx.fillStyle = "black";
+  ctx.arc(68, 12, 8, 0, Math.PI * 2);
+  ctx.moveTo(12, 68);
+  ctx.arc(12, 68, 8, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
   ctx.fill();
 };
 const faceThree = () => {
@@ -46,10 +47,10 @@ const faceThree = () => {
 const faceFour = () => {
   faceTwo();
   ctx.beginPath();
-  ctx.arc(170, 170, 20, 0, Math.PI * 2);
-  ctx.moveTo(30, 30);
-  ctx.arc(30, 30, 20, 0, Math.PI * 2);
-  ctx.fillStyle = "black";
+  ctx.arc(68, 68, 8, 0, Math.PI * 2);
+  ctx.moveTo(12, 12);
+  ctx.arc(12, 12, 8, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
   ctx.fill();
 };
 const faceFive = () => {
@@ -59,29 +60,30 @@ const faceFive = () => {
 const faceSix = () => {
   faceFour();
   ctx.beginPath();
-  ctx.arc(30, 100, 20, 0, Math.PI * 2);
-  ctx.moveTo(170, 100);
-  ctx.arc(170, 100, 20, 0, Math.PI * 2);
-  ctx.fillStyle = "black";
+  ctx.arc(12, 40, 8, 0, Math.PI * 2);
+  ctx.moveTo(68, 40);
+  ctx.arc(68, 40, 8, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
   ctx.fill();
 };
 const gum = () => {
   ctx.beginPath();
-  ctx.moveTo(100, 100);
-  ctx.arc(100, 100, 22, 0, Math.PI * 2);
-  ctx.moveTo(30, 30);
-  ctx.arc(30, 30, 22, 0, Math.PI * 2);
-  ctx.moveTo(170, 30);
-  ctx.arc(170, 30, 22, 0, Math.PI * 2);
-  ctx.moveTo(30, 170);
-  ctx.arc(30, 170, 22, 0, Math.PI * 2);
-  ctx.moveTo(170, 170);
-  ctx.arc(170, 170, 22, 0, Math.PI * 2);
-  ctx.moveTo(30, 100);
-  ctx.arc(30, 100, 22, 0, Math.PI * 2);
-  ctx.moveTo(170, 100);
-  ctx.arc(170, 100, 22, 0, Math.PI * 2);
-  ctx.fillStyle = "blue";
+  ctx.moveTo(40, 40);
+  ctx.arc(40, 40, 9, 0, Math.PI * 2);
+  ctx.moveTo(12, 12);
+  ctx.arc(12, 12, 9, 0, Math.PI * 2);
+  ctx.moveTo(68, 12);
+  ctx.arc(68, 12, 9, 0, Math.PI * 2);
+  ctx.moveTo(12, 68);
+  ctx.arc(12, 68, 9, 0, Math.PI * 2);
+  ctx.moveTo(68, 68);
+  ctx.arc(68, 68, 9, 0, Math.PI * 2);
+  ctx.moveTo(12, 40);
+  ctx.arc(12, 40, 9, 0, Math.PI * 2);
+  ctx.moveTo(68, 40);
+  ctx.arc(68, 40, 9, 0, Math.PI * 2);
+  ctx.fillStyle = "black";
   ctx.fill();
 };
 // les faces des dés de 1 à 6
+
