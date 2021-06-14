@@ -1,34 +1,19 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// Arrondit les angles du dés
-const roundRect = (x, y, w, h, radius) => {
-  const canvas = document.getElementById("canvas");
-  const context = canvas.getContext("2d");
-  const r = x + w;
-  const b = y + h;
-  context.beginPath();
-  context.moveTo(x + radius, y);
-  context.lineTo(r - radius, y);
-  context.quadraticCurveTo(r, y, r, y + radius);
-  context.lineTo(r, y + h - radius);
-  context.quadraticCurveTo(r, b, r - radius, b);
-  context.lineTo(x + radius, b);
-  context.quadraticCurveTo(x, b, x, b - radius);
-  context.lineTo(x, y + radius);
-  context.quadraticCurveTo(x, y, x + radius, y);
-  context.fillStyle = "black";
-  context.fill();
+// le dés
+const dice = () => {
+  ctx.fillStyle = "rgb(255, 255, 255)";
+  ctx.fillRect(0, 0, 80, 80);
 };
-roundRect(0, 0, 80, 80, 8);
-// Arrondit les angles du dés
-
+dice();
+// le dés
 
 // les faces des dés de 1 à 6
 const faceOne = () => {
   ctx.beginPath();
   ctx.arc(40, 40, 8, 0, Math.PI * 2);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "red";
   ctx.fill();
 };
 faceOne();
@@ -37,7 +22,7 @@ const faceTwo = () => {
   ctx.arc(68, 12, 8, 0, Math.PI * 2);
   ctx.moveTo(12, 68);
   ctx.arc(12, 68, 8, 0, Math.PI * 2);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "red";
   ctx.fill();
 };
 const faceThree = () => {
@@ -50,7 +35,7 @@ const faceFour = () => {
   ctx.arc(68, 68, 8, 0, Math.PI * 2);
   ctx.moveTo(12, 12);
   ctx.arc(12, 12, 8, 0, Math.PI * 2);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "red";
   ctx.fill();
 };
 const faceFive = () => {
@@ -63,7 +48,7 @@ const faceSix = () => {
   ctx.arc(12, 40, 8, 0, Math.PI * 2);
   ctx.moveTo(68, 40);
   ctx.arc(68, 40, 8, 0, Math.PI * 2);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "red";
   ctx.fill();
 };
 const gum = () => {
@@ -82,8 +67,7 @@ const gum = () => {
   ctx.arc(12, 40, 9, 0, Math.PI * 2);
   ctx.moveTo(68, 40);
   ctx.arc(68, 40, 9, 0, Math.PI * 2);
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.fill();
 };
 // les faces des dés de 1 à 6
-

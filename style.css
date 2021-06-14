@@ -5,31 +5,33 @@ body {
 .body {
   background-image: url(images/body.jpg);
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-header, footer, .rules {
+header,
+footer,
+.rules {
   text-align: center;
   color: white;
-
 }
 
 header {
   margin: 30px 0 30px 0;
 }
 
-main, .game {
+main,
+.game {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center
+  text-align: center;
 }
 
 #winner {
   align-items: center;
 }
 
-#square, #winner {
+#square,
+#winner {
   width: 80%;
   height: 500px;
   border: 10px solid black;
@@ -37,14 +39,22 @@ main, .game {
   border-image-slice: 1;
 }
 
+#canvas {
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.185);
+}
+
 #winner {
-  background-image:url(images/img-vainqueur.jpg);
+  background-image: url(images/img-vainqueur.jpg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-#winner-one, #winner-two {
+#winner-one,
+#winner-two {
   margin-top: 50px;
   font-size: 30px;
   color: rgb(22, 223, 22);
@@ -67,7 +77,7 @@ main, .game {
 }
 
 .roll-dice {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .current {
@@ -76,40 +86,53 @@ main, .game {
   width: 65px;
 }
 
-.score-global, .color {
+.score-global,
+.color {
   color: red;
-  font-size: 25px
+  font-size: 25px;
 }
 
 .score-current {
-  color: white
+  color: white;
 }
 
 #number {
-  display: none
+  display: none;
 }
 
 .players {
   display: flex;
-  font-size: 18px
+  font-size: 18px;
 }
 
-#btn, #btn1, #endOfTurn, #endOfTurn1, .new-game {
+#btn,
+#btn1,
+#endOfTurn,
+#endOfTurn1,
+.new-game {
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 12px;
-  background-color: grey;
-  box-shadow: 0 9px rgba(128, 128, 128, 0.801);
+  background-color: rgba(128, 128, 128, 0.199);
+  box-shadow: 0 9px rgba(128, 128, 128, 0.158);
 }
 
-#btn:hover, #btn1:hover, #endOfTurn:hover, #endOfTurn1:hover, .new-game:hover {
+#btn:hover,
+#btn1:hover,
+#endOfTurn:hover,
+#endOfTurn1:hover,
+.new-game:hover {
   transform: translateY(3px);
-  box-shadow: 0 6px rgba(128, 128, 128, 0.801);
+  box-shadow: 0 6px rgba(128, 128, 128, 0.158);
 }
 
-#btn:active, #btn1:active, #endOfTurn:active, #endOfTurn1:active, .new-game:active {
+#btn:active,
+#btn1:active,
+#endOfTurn:active,
+#endOfTurn1:active,
+.new-game:active {
   transform: translateY(7px);
-  box-shadow: 0 2px rgba(128, 128, 128, 0.801);
+  box-shadow: 0 2px rgba(128, 128, 128, 0.158);
 }
 
 footer {
