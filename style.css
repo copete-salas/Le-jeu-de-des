@@ -26,8 +26,8 @@ main, .game {
 }
 
 #square, #winner {
-  width: 70%;
-  height: 450px;
+  width: 80%;
+  height: 500px;
   border: 10px solid black;
   border-image: linear-gradient(360deg, rgb(130, 79, 58), rgb(169, 142, 100));
   border-image-slice: 1;
