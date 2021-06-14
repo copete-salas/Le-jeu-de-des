@@ -10,11 +10,11 @@ const btnEndOfTurn1 = document.getElementById('endOfTurn1')
 const btnNewGame = document.getElementById('newGame')
 
 
-document.getElementById('score').textContent = '0'
-document.getElementById('score1').textContent = '0'
+document.getElementById('score').textContent = 'Round'
+document.getElementById('score1').textContent = 'Round'
 document.getElementById('number').textContent = '0'
-document.getElementById('global').textContent = '0'
-document.getElementById('global1').textContent = '0'
+document.getElementById('global').textContent = 'Global'
+document.getElementById('global1').textContent = 'Global'
 document.getElementById('winner').style.display = 'none'
 document.getElementById('winner-two').style.display = 'none'
 document.getElementById('winner-one').style.display = 'none'
@@ -22,6 +22,16 @@ document.getElementById('btn1').style.display = 'none'
 document.getElementById('endOfTurn1').style.display = 'none'
 document.getElementById('square').style.background = 'linear-gradient(90deg, rgb(247, 247, 247) 50%, rgb(255, 255, 255) 50%)'
 
+
+// initialise les compteurs à : 0
+const init = () => {
+  document.getElementById('score').textContent = '0'
+  document.getElementById('score1').textContent = '0'
+  document.getElementById('global').textContent = '0'
+  document.getElementById('global1').textContent = '0'
+}
+btn.addEventListener('click', init)
+// initialise les compteurs à : 0
 
 
 // sert a calculer un nombre aléatoire de 1 à 6 inclu
