@@ -39,6 +39,7 @@
           <label for="exampleInputEmail1" class="form-label">Joueur 1 </label>
           <input
             type="text"
+            onkeypress="verification(event); return false;"
             value="Les caractère spéciaux ne sont pas acceptés"
             onFocus="this.value='';"
             class="form-control"
@@ -51,6 +52,7 @@
           </label>
           <input
             type="text"
+            onkeypress="verification(event); return false;"
             value="Les caractère spéciaux ne sont pas acceptés"
             onFocus="this.value='';"
             class="form-control"

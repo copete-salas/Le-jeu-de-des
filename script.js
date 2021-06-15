@@ -28,7 +28,7 @@ document.getElementById("square").style.background =
   "linear-gradient(90deg, rgb(247, 247, 247) 50%, rgb(255, 255, 255) 50%)";
 document.getElementById("square").style.display = "none";
 
-// inscription des joueurs
+// inscription des joueurs + interdiction aux caractre spéciaux
 const submit = (e) => {
   e.preventDefault();
   const capture = document.getElementById("joueurOne").value;
@@ -43,7 +43,22 @@ const submit = (e) => {
     "Gamer one " + capture1 + " is the WINNER !";
 };
 btnSubmit.addEventListener("click", submit);
-// inscription des joueurs
+
+const verification = (event) => {
+  const keyCode = event.which ? event.which : event.keyCode;
+  const touche = String.fromCharCode(keyCode);
+  const champ = document.getElementById("joueurOne");
+  const champ0 = document.getElementById("joueurTwo");
+
+  const caracteres =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  if (caracteres.indexOf(touche) >= 0) {
+    champ.value += touche;
+    champ0.value += touche;
+  }
+};
+// inscription des joueurs + interdiction aux caractre spéciaux
 
 // sert a calculer un nombre aléatoire de 1 à 6 inclu
 const random = (max, min) => {
