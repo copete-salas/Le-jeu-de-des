@@ -26,6 +26,12 @@ main,
   text-align: center;
 }
 
+#form {
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
 #winner {
   align-items: center;
 }

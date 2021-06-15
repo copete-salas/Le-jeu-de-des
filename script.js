@@ -12,6 +12,7 @@ const musicHold = document.getElementById("musicHold");
 const musicNewGame = document.getElementById("musicNewGame");
 const musicRollDice = document.getElementById("musicRollDice");
 const musicWinner = document.getElementById("musicWinner");
+const btnSubmit = document.getElementById("submit");
 
 document.getElementById("score").textContent = "0";
 document.getElementById("score1").textContent = "0";
@@ -25,6 +26,24 @@ document.getElementById("btn1").style.display = "none";
 document.getElementById("endOfTurn1").style.display = "none";
 document.getElementById("square").style.background =
   "linear-gradient(90deg, rgb(247, 247, 247) 50%, rgb(255, 255, 255) 50%)";
+document.getElementById("square").style.display = "none";
+
+// inscription des joueurs
+const submit = (e) => {
+  e.preventDefault();
+  const capture = document.getElementById("joueurOne").value;
+  const capture1 = document.getElementById("joueurTwo").value;
+  document.querySelector("#square").style.display = "block";
+  document.getElementById("player1").textContent = capture;
+  document.getElementById("player2").textContent = capture1;
+  document.getElementById("form").style.display = "none";
+  document.getElementById("winner-one").textContent =
+    "Gamer one " + capture + " is the WINNER !";
+  document.getElementById("winner-two").textContent =
+    "Gamer one " + capture1 + " is the WINNER !";
+};
+btnSubmit.addEventListener("click", submit);
+// inscription des joueurs
 
 // sert a calculer un nombre aléatoire de 1 à 6 inclu
 const random = (max, min) => {
@@ -242,3 +261,4 @@ const music2 = () => {
   musicNewGame.play();
 };
 btnNewGame.addEventListener("click", music2);
+// joue un son sur différent éléments

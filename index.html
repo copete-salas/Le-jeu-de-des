@@ -29,16 +29,43 @@
       <h1>Le Jeu De Dés</h1>
     </header>
     <main>
+      <!-- formulaire d'inscription -->
+      <form id="form">
+        <h2>
+          Pour jouer renseigné les champs <br />
+          Joueur 1 et Joueur 2 !
+        </h2>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Joueur 1 </label>
+          <input
+            type="text"
+            value="Les caractère spéciaux ne sont pas acceptés"
+            onFocus="this.value='';"
+            class="form-control"
+            id="joueurOne"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Joueur 2
+          </label>
+          <input
+            type="text"
+            value="Les caractère spéciaux ne sont pas acceptés"
+            onFocus="this.value='';"
+            class="form-control"
+            id="joueurTwo"
+          />
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+      <!-- formulaire d'inscription -->
       <!-- image qui s'affiche quand un joueur gagne -->
       <div id="winner">
-        <p id="winner-one">
-          WINNER! <br />
-          PLAYER ONE !
-        </p>
-        <p id="winner-two">
-          WINNER! <br />
-          PLAYER TWO!
-        </p>
+        <p id="winner-one">PLAYER ONE !</p>
+        <p id="winner-two">PLAYER TWO!</p>
       </div>
       <!-- image qui s'affiche quand un joueur gagne -->
       <!-- l'espace de jeu -->
@@ -65,13 +92,13 @@
         </div>
         <div class="game">
           <div>
-            <p class="players">Player 1</p>
+            <p id="player1" class="players">Player 1</p>
             <p id="global" class="score-global">score</p>
           </div>
           <canvas id="canvas" height="80" width="80"></canvas>
           <p id="number">0</p>
           <div>
-            <p class="players">Player 2</p>
+            <p id="player2" class="players">Player 2</p>
             <p id="global1" class="score-global">score</p>
           </div>
         </div>
