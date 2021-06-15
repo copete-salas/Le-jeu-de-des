@@ -19,6 +19,12 @@
     />
   </head>
   <body class="body">
+    <div>
+      <audio id="musicHold" src="music/hold.mp3"></audio>
+      <audio id="musicNewGame" src="music/new-game.mp3"></audio>
+      <audio id="musicRollDice" src="music/roll-dice.mp3"></audio>
+      <audio id="musicWinner" src="music/winner.mp3"></audio>
+    </div>
     <header>
       <h1>Le Jeu De Dés</h1>
     </header>
@@ -37,8 +43,8 @@
       <!-- image qui s'affiche quand un joueur gagne -->
       <!-- l'espace de jeu -->
       <div id="square">
-        <div class="new-game">
-          <p id="newGame">
+        <div id="newGame" class="new-game">
+          <p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

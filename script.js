@@ -8,6 +8,10 @@ const global1 = document.getElementById("global1");
 const btnEndOfTurn = document.getElementById("endOfTurn");
 const btnEndOfTurn1 = document.getElementById("endOfTurn1");
 const btnNewGame = document.getElementById("newGame");
+const musicHold = document.getElementById("musicHold");
+const musicNewGame = document.getElementById("musicNewGame");
+const musicRollDice = document.getElementById("musicRollDice");
+const musicWinner = document.getElementById("musicWinner");
 
 document.getElementById("score").textContent = "0";
 document.getElementById("score1").textContent = "0";
@@ -155,6 +159,7 @@ const resultScoreGlobal = () => {
     document.getElementById("square").style.display = "none";
     document.getElementById("winner").style.display = "block";
     document.getElementById("winner-one").style.display = "block";
+    musicWinner.play();
   }
 };
 btnEndOfTurn.addEventListener("click", resultScoreGlobal);
@@ -169,6 +174,7 @@ const resultScoreGlobal1 = () => {
     document.getElementById("square").style.display = "none";
     document.getElementById("winner").style.display = "block";
     document.getElementById("winner-two").style.display = "block";
+    musicWinner.play();
   }
 };
 btnEndOfTurn1.addEventListener("click", resultScoreGlobal1);
@@ -218,3 +224,21 @@ const automaticPlayerchange = () => {
 btn.addEventListener("click", automaticPlayerchange);
 btn1.addEventListener("click", automaticPlayerchange);
 // changement de joueur au click ou automatiquement
+
+// joue un son sur différent éléments
+const music0 = () => {
+  musicRollDice.play();
+};
+btn.addEventListener("click", music0);
+btn1.addEventListener("click", music0);
+
+const music1 = () => {
+  musicHold.play();
+};
+btnEndOfTurn.addEventListener("click", music1);
+btnEndOfTurn1.addEventListener("click", music1);
+
+const music2 = () => {
+  musicNewGame.play();
+};
+btnNewGame.addEventListener("click", music2);
