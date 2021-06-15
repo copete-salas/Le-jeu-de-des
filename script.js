@@ -38,9 +38,9 @@ const submit = (e) => {
   document.getElementById("player2").textContent = capture1;
   document.getElementById("form").style.display = "none";
   document.getElementById("winner-one").textContent =
-    "Gamer one " + capture + " is the WINNER !";
+    "Gamer " + capture + " is the WINNER !";
   document.getElementById("winner-two").textContent =
-    "Gamer one " + capture1 + " is the WINNER !";
+    "Gamer " + capture1 + " is the WINNER !";
 };
 btnSubmit.addEventListener("click", submit);
 
@@ -48,14 +48,21 @@ const verification = (event) => {
   const keyCode = event.which ? event.which : event.keyCode;
   const touche = String.fromCharCode(keyCode);
   const champ = document.getElementById("joueurOne");
-  const champ0 = document.getElementById("joueurTwo");
-
   const caracteres =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
   if (caracteres.indexOf(touche) >= 0) {
     champ.value += touche;
-    champ0.value += touche;
+  }
+};
+
+const verification1 = (event) => {
+  const keyCode = event.which ? event.which : event.keyCode;
+  const touche = String.fromCharCode(keyCode);
+  const champ = document.getElementById("joueurTwo");
+  const caracteres =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  if (caracteres.indexOf(touche) >= 0) {
+    champ.value += touche;
   }
 };
 // inscription des joueurs + interdiction aux caractre spéciaux
