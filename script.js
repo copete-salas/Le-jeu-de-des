@@ -55,7 +55,7 @@ const result = () => {
       gum();
       faceSix();
     }
-  }, 1400);
+  }, 700);
 };
 btn.addEventListener("click", result);
 btn1.addEventListener("click", result);
@@ -66,27 +66,27 @@ resultScore = () => {
   setTimeout(() => {
     gum();
     faceSix();
-  }, 1000);
+  }, 500);
   setTimeout(() => {
     gum();
     faceOne();
-  }, 1200);
-  setTimeout(() => {
-    gum();
-    faceFive();
   }, 600);
   setTimeout(() => {
     gum();
+    faceFive();
+  }, 300);
+  setTimeout(() => {
+    gum();
     faceTwo();
-  }, 800);
+  }, 400);
   setTimeout(() => {
     gum();
     faceFour();
-  }, 200);
+  }, 100);
   setTimeout(() => {
     gum();
     faceThree();
-  }, 400);
+  }, 200);
   setTimeout(() => {
     if (number.textContent == 1) {
       score.textContent = 0;
@@ -94,7 +94,7 @@ resultScore = () => {
       score.textContent =
         parseFloat(score.textContent) + parseFloat(number.textContent);
     }
-  }, 1400);
+  }, 700);
 };
 btn.addEventListener("click", resultScore);
 
@@ -102,27 +102,27 @@ resultScore1 = () => {
   setTimeout(() => {
     gum();
     faceSix();
-  }, 1000);
+  }, 500);
   setTimeout(() => {
     gum();
     faceOne();
-  }, 1200);
-  setTimeout(() => {
-    gum();
-    faceFive();
   }, 600);
   setTimeout(() => {
     gum();
+    faceFive();
+  }, 300);
+  setTimeout(() => {
+    gum();
     faceTwo();
-  }, 800);
+  }, 400);
   setTimeout(() => {
     gum();
     faceFour();
-  }, 200);
+  }, 100);
   setTimeout(() => {
     gum();
     faceThree();
-  }, 400);
+  }, 200);
   setTimeout(() => {
     if (number.textContent == 1) {
       score1.textContent = 0;
@@ -130,7 +130,7 @@ resultScore1 = () => {
       score1.textContent =
         parseFloat(score1.textContent) + parseFloat(number.textContent);
     }
-  }, 1400);
+  }, 700);
 };
 
 btn1.addEventListener("click", resultScore1);
@@ -219,7 +219,7 @@ const automaticPlayerchange = () => {
     if (number.textContent == 1) {
       playerChange();
     }
-  }, 1400);
+  }, 700);
 };
 btn.addEventListener("click", automaticPlayerchange);
 btn1.addEventListener("click", automaticPlayerchange);
